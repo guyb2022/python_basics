@@ -1,0 +1,12 @@
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Runtime for display_info_and_time: 1.001 sec
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Runtime for display_info_and_time: 1.001 sec
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Runtime for display_info_and_time: 1.001 sec, Time: <built-in function time>
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Runtime for display_info_and_time: 1.001 sec, Time: <built-in method now of type object at 0x00007FFDC9D888E0>
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Runtime for display_info_and_time: 1.001 sec, Time: <method-wrapper '__str__' of builtin_function_or_method object at 0x000001F95DEADEE0>
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Runtime for display_info_and_time: 1.001 sec, Time: 2023-06-03 21:34:58.942938

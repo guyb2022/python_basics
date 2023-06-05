@@ -1,2 +1,7 @@
 INFO:root:Run with args: {args} and kwargs: {kwargs}
 INFO:root:Run with args: ('log', 'time') and kwargs: {}
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
+INFO:root:Run with args: ('Hello', 'World') with kwargs: {}

@@ -1,3 +1,5 @@
+import time
+import logging
 
 # First usage
 def outer_function(msg):
@@ -9,8 +11,8 @@ my_func = outer_function('Hi')
 ## Output
 # Hi
 
-# Execute the function
-my_func()
+# # Execute the function
+# my_func()
 
 # Second usage
 def decorator_function(func):
@@ -22,63 +24,61 @@ def decorator_function(func):
 @decorator_function
 def display(arg1, arg2):
     print(f"I'm Just a function with {arg1} {arg2}")
-## The @decorator_function is the same as write:
-# display = decorator_function(display)
-display('parameters','args')
-## Output
-# wrapper execute this before: display
-# wrapper execute this before: display
-# I'm Just a function with args parameters
+# ## The @decorator_function is the same as write:
+# # display = decorator_function(display)
+# display('parameters','args')
+# ## Output
+# # wrapper execute this before: display
+# # wrapper execute this before: display
+# # I'm Just a function with args parameters
 
 # work with class
-class decoretor_class(object):
-
+class DecoretorClass(object):
     def __init__(self, original_function):
         self.original_function = original_function
 
     def __call__(self, *args, **kwargs):
-        print(f"wrapper execute this before: {self.original_function.__name__}")
+        print(f"wrapper class: {self.original_function.__name__}")
         return self.original_function(*args, **kwargs)
 
-@decoretor_class
-def deisplay_class(arg1, arg2):
-    print(f"I'm Just a function with {arg1} {arg2}")
+@DecoretorClass
+def display_class(*args, **kwargs):
+    print(f"I'm Just a function with args: {args} and kwargs: {kwargs} ")
 
-deisplay_class('class','args')
+display_class('These','many','class','args', params='Not relevant')
 
 # add loging capability
 from functools import wraps
-# this is used for preserving the original behave
-# of the wrapper after we chaiin them togather
 
 def my_logger(original_func):
-    import logging
     logging.basicConfig(filename=f"{original_func.__name__}.log", level=logging.INFO)
 
     @wraps(original_func)
     def wrapper(*args, **kwargs):
+        """ Handle the logging"""
         logging.info(
-            f"Run with args: {args} and kwargs: {kwargs}")
+            f"Run with args: {args} with kwargs: {kwargs}")
         return original_func(*args, **kwargs)
-
     return wrapper
 
 def my_timer(original_func):
-    import time
-
     @wraps(original_func)
     def wrapper(*args, **kwargs):
+        """ Calaulate the runtime for a called function"""
         start = time.time()
         result = original_func(*args, **kwargs)
         end = time.time() - start
-        print(f"{original_func.__name__} run in: {end} sec")
-
+        print(f"{original_func.__name__} run in: {round(end,3)} sec")
+        return round(end,3)
     return wrapper
 
-@my_logger
 @my_timer
+@my_logger
 def display_info_multi(arg1, arg2):
     print(f"I'm Just a function with {arg1} {arg2}")
+    time.sleep(1)
 
-display_info_multi('log', 'time')
+# display_info_multi('log', 'time')
+
+
 
