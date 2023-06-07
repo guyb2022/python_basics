@@ -79,3 +79,14 @@ with concurrent.futures.ThreadPoolExecutor() as executer:
 
 end = time.perf_counter()
 print(f"program finished in {round(end-start,2)} second(s)'")
+
+# using class overiding the run method
+class MyThreads(threading.Thread):
+    def run(self):
+        # code to be executed in the thread
+        print("I'm a class thread!")
+
+# Create and the start the thread
+t = MyThreads()
+t.start()
+
