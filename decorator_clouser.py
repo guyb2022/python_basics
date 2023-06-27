@@ -1,5 +1,6 @@
 import time
 import logging
+from datetime import datetime
 
 # First usage
 def outer_function(msg):
@@ -45,7 +46,7 @@ class DecoretorClass(object):
 def display_class(*args, **kwargs):
     print(f"I'm Just a function with args: {args} and kwargs: {kwargs} ")
 
-display_class('These','many','class','args', params='Not relevant')
+# display_class('These','many','class','args', params='Not relevant')
 
 # add loging capability
 from functools import wraps
@@ -66,19 +67,21 @@ def my_timer(original_func):
     def wrapper(*args, **kwargs):
         """ Calaulate the runtime for a called function"""
         start = time.time()
-        result = original_func(*args, **kwargs)
+        original_func(*args, **kwargs)
         end = time.time() - start
-        print(f"{original_func.__name__} run in: {round(end,3)} sec")
+        formatted_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        logging.info(
+            f"{original_func.__name__} run in: {round(end,3)} sec, Time: {formatted_datetime}")
         return round(end,3)
     return wrapper
 
 @my_timer
 @my_logger
-def display_info_multi(arg1, arg2):
-    print(f"I'm Just a function with {arg1} {arg2}")
+def display_info_and_time(*args, **kwargs):
+    print(f"I'm Just a function with args:{args} and kwargs:{kwargs} ")
     time.sleep(1)
 
-# display_info_multi('log', 'time')
+display_info_and_time('log', 'time', params='Not relevant')
 
 
 

@@ -10,3 +10,6 @@ INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
 INFO:root:Runtime for display_info_and_time: 1.001 sec, Time: <method-wrapper '__str__' of builtin_function_or_method object at 0x000001F95DEADEE0>
 INFO:root:Run with args: ('Hello', 'World') with kwargs: {}
 INFO:root:Runtime for display_info_and_time: 1.001 sec, Time: 2023-06-03 21:34:58.942938
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:display_info_and_time run in: 1.001 sec, Time: 2023-06-25 11:20:53
+

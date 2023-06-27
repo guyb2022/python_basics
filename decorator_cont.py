@@ -11,7 +11,9 @@ def wrapper(func):
 def camel_case(s):
     """ Turn strings into camel case"""
     return ''.join([word.capitalize()  for word in s.split('_')])
-#
+
+print(camel_case(['great_work_ahead']))
+
 
 names = [
     'mr_easy_beasy',
@@ -19,9 +21,11 @@ names = [
     'great_work_ahead'
 ]
 
-print(camel_case(names))
 
-print(camel_case.__doc__)
+
+
+# print(camel_case([s1,s2,s3]))
+# print(camel_case.__doc__)
 
 
 def check_division(func):
@@ -31,7 +35,7 @@ def check_division(func):
         if b == 0:
             print("Cant divide by 0")
             return
-        func(a, b)
+        return func(a, b)
 
     return inner
 
@@ -40,6 +44,6 @@ def check_division(func):
 def divide(x, y):
     return x / y
 
+# divide = check_division(divide)
+
 divide(10,0)
-# Output
-# Cant divide by 0

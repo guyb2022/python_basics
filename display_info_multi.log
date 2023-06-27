@@ -5,3 +5,22 @@ INFO:root:Run with args: ('log', 'time') with kwargs: {}
 INFO:root:Run with args: ('log', 'time') with kwargs: {}
 INFO:root:Run with args: ('log', 'time') with kwargs: {}
 INFO:root:Run with args: ('log', 'time') with kwargs: {}
+INFO:root:Run with args: ('log', 'time') with kwargs: {}
+INFO:root:Run with args: ('log', 'time') with kwargs: {}
+INFO:root:Run with args: ('log', 'time') with kwargs: {}
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:display_info_multi run in: 1.001 sec
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:display_info_multi run in: 1.002 sec, Time: 1687680054.8000028
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:display_info_multi run in: 1.002 sec, Time: 974024.4356553
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:display_info_multi run in: 1.001 sec, Time: <built-in function localtime>
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:display_info_multi run in: 1.001 sec, Time: 2023-06-25 11:10:35
+INFO:root:Run with args: ('log', 'time') with kwargs: {'params': 'Not relevant'}
+INFO:root:display_info_multi run in: 1.001 sec, Time: 2023-06-25 11:19:03
